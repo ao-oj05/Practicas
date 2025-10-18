@@ -24,13 +24,10 @@ fun NavManager(dashboardViewModel: DashboardViewModel){
         composable("Details/{id}", arguments = listOf(
             navArgument("id"){
                 type = NavType.LongType
-            },
-            navArgument("dashboardViewModel"){
-                type = NavType.
             }
         )) {
             val id =it.arguments?.getLong("id")?:0L
-            DetailsView(navController, id)
+            DetailsView(navController, id, dashboardViewModel)
         }
         composable("AddStudent") {
             AddStudentView(navController, dashboardViewModel)

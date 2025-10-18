@@ -35,11 +35,11 @@ fun AddStudentView(navController: NavController, dashboardViewModel: DashboardVi
             )
         }
     ) {
-        AddStudentViewContent(it)
+        AddStudentViewForm(it, dashboardViewModel)
     }
 }
 
 @Composable
-fun AddStudentViewContent(paddingValues: PaddingValues){
+fun AddStudentViewForm(paddingValues: PaddingValues, dashboardViewModel: DashboardViewModel){
 
 }

@@ -39,7 +39,7 @@ fun DetailsView(navController: NavController, id: Long, dashboardViewModel: Dash
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
-                    Text("Detalle del personaje")
+                    Text("Detalle del estudiante")
                 },
                 actions = {
                     IconButton(

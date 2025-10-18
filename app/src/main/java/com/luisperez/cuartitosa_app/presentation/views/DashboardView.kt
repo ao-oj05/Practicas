@@ -6,9 +6,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -26,6 +28,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -38,7 +41,7 @@ fun DashboardView(navController: NavController, dashboardViewModel: DashboardVie
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Dashboard") }
+                title = { Text("Estudiantes") }
             )
         },
         floatingActionButton = {
@@ -68,8 +71,10 @@ fun Content(paddingValues: PaddingValues, students: List<Student>, navController
                     .clickable{
                         navController.navigate("Details/${student.id}")
                     }
-                    .size(90.dp)
-                    .background(color = Color.White, CircleShape)
+                    .height(90.dp)
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(35))
+                    .background(color = Color.White)
                     .wrapContentSize(Alignment.Center)
                     .padding(10.dp)
             ){
@@ -80,10 +85,5 @@ fun Content(paddingValues: PaddingValues, students: List<Student>, navController
             Spacer(modifier = Modifier.height(10.dp))
         }
     }
-
-}
-
-@Composable
-fun AddMenu(){
 
 }

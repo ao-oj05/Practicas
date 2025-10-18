@@ -16,8 +16,9 @@ class DashboardViewModel: ViewModel() {
         Student(5L, "Nami", "Negociante del equipo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1ZA7uCwrcmgQzHPTmM89tp80T_Cmwcn8lw&s"),
     ))
 
-    fun addStudent(id: Long, name: String, description: String, img: String){
-        val student: Student = Student(id, name, description,img)
+    fun addStudent( name: String, description: String, img: String){
+        val idStudent: Long = students.last().id+1
+        val student: Student = Student(idStudent, name, description,img)
         students =  students + student
     }
 }

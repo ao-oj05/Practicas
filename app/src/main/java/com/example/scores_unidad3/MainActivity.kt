@@ -1,4 +1,4 @@
-package com.example.scores_unidad3
+    package com.example.scores_unidad3
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

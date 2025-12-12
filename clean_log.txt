@@ -1,0 +1,34 @@
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+A problem occurred configuring project ':app'.
+> Failed to calculate the value of task ':app:compileDebugJavaWithJavac' property 'javaCompiler'.
+   > Toolchain installation 'C:\Program Files\Eclipse Adoptium\jre-21.0.7.6-hotspot' does not provide the required capabilities: [JAVA_COMPILER]
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Failed to query the value of property 'buildFlowServiceProperty'.
+> Could not isolate value org.jetbrains.kotlin.gradle.plugin.statistics.BuildFlowService$Parameters_Decorated@f5de907 of type BuildFlowService.Parameters
+   > A problem occurred configuring project ':app'.
+      > Failed to calculate the value of task ':app:compileDebugJavaWithJavac' property 'javaCompiler'.
+         > Toolchain installation 'C:\Program Files\Eclipse Adoptium\jre-21.0.7.6-hotspot' does not provide the required capabilities: [JAVA_COMPILER]
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+BUILD FAILED in 1s
